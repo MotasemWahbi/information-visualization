@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>libgumbo &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usr/lib/ruby/gems/2.6.0/gems/nokogiri-1.13.8/gumbo-parser/src/README';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../../../docs/home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../../../../../docs/home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../../docs/notebook.html">Example Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fusr/lib/ruby/gems/2.6.0/gems/nokogiri-1.13.8/gumbo-parser/src/README.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../../../../../_sources/usr/lib/ruby/gems/2.6.0/gems/nokogiri-1.13.8/gumbo-parser/src/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>libgumbo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="libgumbo">
+<h1>libgumbo<a class="headerlink" href="#libgumbo" title="Link to this heading">#</a></h1>
+<p>This is an internal fork of the <a class="reference external" href="https://github.com/google/gumbo-parser/tree/aa91b27b02c0c80c482e24348a457ed7c3c088e0/src">libgumbo</a> library, which was copied and
+later modified under the terms of the Apache 2.0 <a class="reference external" href="https://github.com/google/gumbo-parser/blob/aa91b27b02c0c80c482e24348a457ed7c3c088e0/COPYING">license</a>. See <code class="docutils literal notranslate"><span class="pre">lua-gumbo</span></code>
+commit <a class="reference external" href="https://gitlab.com/craigbarnes/lua-gumbo/commit/0a047282815af86f3367a7d95fefcfe5723ece48"><code class="docutils literal notranslate"><span class="pre">0a04728</span></code></a> for details of the original import.</p>
+<p>Since importing the code, the following notable fixes and improvements
+have been made:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">91cef89</span></code>: Re-implement <code class="docutils literal notranslate"><span class="pre">adjust_foreign_attributes()</span></code> with a gperf hash</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b11abe7</span></code>: Pass <code class="docutils literal notranslate"><span class="pre">TagSet</span></code> arrays into functions by reference instead of value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">b73dc03</span></code>: Simplify <code class="docutils literal notranslate"><span class="pre">maybe_replace_codepoint()</span></code> function</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d5d0bb3</span></code>: Remove special handling of <code class="docutils literal notranslate"><span class="pre">&lt;menuitem&gt;</span></code> tag</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7bd5162</span></code>: Remove special handling of <code class="docutils literal notranslate"><span class="pre">&lt;isindex&gt;</span></code> tag</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a5c1b0e</span></code>: Use <code class="docutils literal notranslate"><span class="pre">realloc(3)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">malloc(3)</span></code> in <code class="docutils literal notranslate"><span class="pre">enlarge_vector_if_full()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dcbebd7</span></code>: Use <code class="docutils literal notranslate"><span class="pre">realloc(3)</span></code> instead of <code class="docutils literal notranslate"><span class="pre">malloc(3)</span></code> in <code class="docutils literal notranslate"><span class="pre">maybe_resize_string_buffer()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df15262</span></code>: Make <code class="docutils literal notranslate"><span class="pre">destroy_node()</span></code> function non-recursive</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">2df37f5</span></code>: Fix signedness of some format specifiers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">176553e</span></code>: Add maximum element nesting limit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bed0f4a</span></code>: Annotate <code class="docutils literal notranslate"><span class="pre">gumbo_debug()</span></code> with <code class="docutils literal notranslate"><span class="pre">PRINTF</span></code> macro and fix warnings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7ffc218</span></code>: Annotate <code class="docutils literal notranslate"><span class="pre">print_message()</span></code> with <code class="docutils literal notranslate"><span class="pre">PRINTF</span></code> macro and fix warnings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1bd8ab5</span></code>, <code class="docutils literal notranslate"><span class="pre">9136507</span></code>, <code class="docutils literal notranslate"><span class="pre">53a1f9a</span></code>: Deduplicate some identical <code class="docutils literal notranslate"><span class="pre">TagSet</span></code> arrays</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a7a9065</span></code>: Add some GCC/Clang function attributes</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8d3d4e4</span></code>: Remove custom allocator support</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8d3b006</span></code>: Fix recording of source positions for <code class="docutils literal notranslate"><span class="pre">&lt;/form&gt;</span></code> end tags</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">1a8d763</span></code>: Replace linear search in <code class="docutils literal notranslate"><span class="pre">maybe_replace_codepoint()</span></code> with a lookup table</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">6dca79e</span></code>: Replace <code class="docutils literal notranslate"><span class="pre">strcasecmp()</span></code> and <code class="docutils literal notranslate"><span class="pre">strncasecmp()</span></code> with ascii-only equivalents</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">17ab1d2</span></code>: Fix <code class="docutils literal notranslate"><span class="pre">TAGSET_INCLUDES</span></code> macro to work properly with multiple bit flags</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">7e56d45</span></code>: Re-implement <code class="docutils literal notranslate"><span class="pre">gumbo_normalize_svg_tagname()</span></code> with a gperf hash</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a518d35</span></code>: Replace linear array search in <code class="docutils literal notranslate"><span class="pre">adjust_svg_attributes()</span></code> with a gperf hash</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a4a7433</span></code>: Fix duplicate <code class="docutils literal notranslate"><span class="pre">TagSet</span></code> initializer being ignored in <code class="docutils literal notranslate"><span class="pre">is_special_node()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">8137fcd</span></code>: Add support for <code class="docutils literal notranslate"><span class="pre">&lt;dialog&gt;</span></code> tag</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">4b35471</span></code>: Add missing <code class="docutils literal notranslate"><span class="pre">static</span></code> qualifiers to hide symbols that shouldn’t be extern</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">df57c59</span></code>, <code class="docutils literal notranslate"><span class="pre">03101f3</span></code>, <code class="docutils literal notranslate"><span class="pre">ea62330</span></code>: Replace use of locale-dependant <code class="docutils literal notranslate"><span class="pre">ctype.h</span></code> functions
+with custom, ASCII-only equivalents</p></li>
+</ul>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usr/lib/ruby/gems/2.6.0/gems/nokogiri-1.13.8/gumbo-parser/src"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

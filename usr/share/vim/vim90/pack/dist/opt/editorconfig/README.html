@@ -1,0 +1,642 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>EditorConfig Vim Plugin &#8212; Jupyter Book Template</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../../../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../../../../../../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../../../../../../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../../../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../../../../../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../../../../../../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../../../../../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../../../../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../../../../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../../../../../../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../../../../../../../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../../../../../../../../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usr/share/vim/vim90/pack/dist/opt/editorconfig/README';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="../../../../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../../../../../../docs/home.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Jupyter Book Template</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../../../../../../../docs/home.html">
+                    Jupyter Book Tutorial
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../../../../docs/notebook.html">Example Notebook</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fusr/share/vim/vim90/pack/dist/opt/editorconfig/README.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../../../../../../../_sources/usr/share/vim/vim90/pack/dist/opt/editorconfig/README.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>EditorConfig Vim Plugin</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-the-archive">Install with the archive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-as-vim8-plugin">Install as Vim8 plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-pathogen">Install with pathogen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-vundle">Install with Vundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-vim-plug">Install with vim-plug</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-external-editorconfig-core-library-is-required">No external editorconfig core library is required</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-properties">Supported properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selected-options">Selected Options</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excluded-patterns">Excluded patterns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-for-a-specific-filetype">Disable for a specific filetype</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-rules">Disable rules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bugs-and-feature-requests">Bugs and Feature Requests</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="editorconfig-vim-plugin">
+<h1>EditorConfig Vim Plugin<a class="headerlink" href="#editorconfig-vim-plugin" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://travis-ci.org/editorconfig/editorconfig-vim"><img alt="Travis Build Status" src="https://img.shields.io/travis/cxw42/editorconfig-vim.svg?logo=travis" /></a>
+<a class="reference external" href="https://ci.appveyor.com/project/cxw42/editorconfig-vim"><img alt="Appveyor Build Status" src="https://img.shields.io/appveyor/ci/cxw42/editorconfig-vim.svg?logo=appveyor" /></a></p>
+<p>This is an <a class="reference external" href="http://editorconfig.org">EditorConfig</a> plugin for Vim. This plugin can be found on both
+<a class="reference external" href="https://github.com/editorconfig/editorconfig-vim">GitHub</a> and <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=3934">Vim online</a>.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Link to this heading">#</a></h2>
+<p>To install this plugin, you can use one of the following ways:</p>
+<section id="install-with-the-archive">
+<h3>Install with the archive<a class="headerlink" href="#install-with-the-archive" title="Link to this heading">#</a></h3>
+<p>Download the <a class="reference external" href="https://github.com/editorconfig/editorconfig-vim/archive/master.zip">archive</a> and extract it into your Vim runtime directory
+(<code class="docutils literal notranslate"><span class="pre">~/.vim</span></code> on UNIX/Linux and <code class="docutils literal notranslate"><span class="pre">$VIM_INSTALLATION_FOLDER\vimfiles</span></code> on windows).
+You should have 4 sub-directories in this runtime directory now: “autoload”,
+“doc”, “ftdetect” and “plugin”.</p>
+</section>
+<section id="install-as-vim8-plugin">
+<h3>Install as Vim8 plugin<a class="headerlink" href="#install-as-vim8-plugin" title="Link to this heading">#</a></h3>
+<p>Install as a Vim 8 plugin. Note <code class="docutils literal notranslate"><span class="pre">local</span></code> can be any name, but some path
+element must be present. On Windows, instead of <code class="docutils literal notranslate"><span class="pre">~/.vim</span></code> use
+<code class="docutils literal notranslate"><span class="pre">$VIM_INSTALLATION_FOLDER\vimfiles</span></code>.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.vim/pack/local/start
+<span class="nb">cd</span><span class="w"> </span>~/.vim/pack/local/start
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/editorconfig/editorconfig-vim.git
+</pre></div>
+</div>
+</section>
+<section id="install-with-pathogen">
+<h3>Install with <a class="reference external" href="https://github.com/tpope/vim-pathogen">pathogen</a><a class="headerlink" href="#install-with-pathogen" title="Link to this heading">#</a></h3>
+<p>Use pathogen (the git repository of this plugin is
+<a class="github reference external" href="https://github.com/editorconfig/editorconfig-vim.git">editorconfig/editorconfig-vim.git</a>)</p>
+</section>
+<section id="install-with-vundle">
+<h3>Install with <a class="reference external" href="https://github.com/gmarik/Vundle.vim">Vundle</a><a class="headerlink" href="#install-with-vundle" title="Link to this heading">#</a></h3>
+<p>Use Vundle by adding to your <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> Vundle plugins section:</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>Plugin &#39;editorconfig/editorconfig-vim&#39;
+</pre></div>
+</div>
+<p>Then call <code class="docutils literal notranslate"><span class="pre">:PluginInstall</span></code>.</p>
+</section>
+<section id="install-with-vim-plug">
+<h3>Install with <a class="reference external" href="https://github.com/junegunn/vim-plug">vim-plug</a><a class="headerlink" href="#install-with-vim-plug" title="Link to this heading">#</a></h3>
+<p>Use vim-plug by adding to your <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> in your plugin section:</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>Plug &#39;editorconfig/editorconfig-vim&#39;
+</pre></div>
+</div>
+<p>Source your <code class="docutils literal notranslate"><span class="pre">.vimrc</span></code> by calling <code class="docutils literal notranslate"><span class="pre">:source</span> <span class="pre">$MYVIMRC</span></code>.</p>
+<p>Then call <code class="docutils literal notranslate"><span class="pre">:PlugInstall</span></code>.</p>
+</section>
+<section id="no-external-editorconfig-core-library-is-required">
+<h3>No external editorconfig core library is required<a class="headerlink" href="#no-external-editorconfig-core-library-is-required" title="Link to this heading">#</a></h3>
+<p>Previous versions of this plugin also required a Python “core”.
+The core included the code to parse <code class="docutils literal notranslate"><span class="pre">.editorconfig</span></code> files.
+This plugin <strong>includes</strong> the core, so you don’t need to download the
+core separately.</p>
+</section>
+</section>
+<section id="supported-properties">
+<h2>Supported properties<a class="headerlink" href="#supported-properties" title="Link to this heading">#</a></h2>
+<p>The EditorConfig Vim plugin supports the following EditorConfig <a class="reference external" href="http://github.com/editorconfig/editorconfig/wiki/EditorConfig-Properties">properties</a>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">indent_style</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">indent_size</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tab_width</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end_of_line</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">charset</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert_final_newline</span></code> (Feature <code class="docutils literal notranslate"><span class="pre">+fixendofline</span></code>, available on Vim 7.4.785+,
+or <a class="reference external" href="http://www.vim.org/scripts/script.php?script_id=4550">PreserveNoEOL</a> is required for this property)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">trim_trailing_whitespace</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_line_length</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">root</span></code> (only used by EditorConfig core)</p></li>
+</ul>
+</section>
+<section id="selected-options">
+<h2>Selected Options<a class="headerlink" href="#selected-options" title="Link to this heading">#</a></h2>
+<p>The supported options are documented in <a class="reference external" href="https://github.com/editorconfig/editorconfig-vim/blob/master/doc/editorconfig.txt">editorconfig.txt</a>
+and can be viewed by executing the following: <code class="docutils literal notranslate"><span class="pre">:help</span> <span class="pre">editorconfig</span></code>. You may
+need to execute <code class="docutils literal notranslate"><span class="pre">:helptags</span> <span class="pre">ALL</span></code> so that Vim is aware of editorconfig.txt.</p>
+<section id="excluded-patterns">
+<h3>Excluded patterns<a class="headerlink" href="#excluded-patterns" title="Link to this heading">#</a></h3>
+<p>To ensure that this plugin works well with <a class="reference external" href="https://github.com/tpope/vim-fugitive">Tim Pope’s fugitive</a>, use the
+following patterns array:</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>let g:EditorConfig_exclude_patterns = [&#39;fugitive://.*&#39;]
+</pre></div>
+</div>
+<p>If you wanted to avoid loading EditorConfig for any remote files over ssh:</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>let g:EditorConfig_exclude_patterns = [&#39;scp://.*&#39;]
+</pre></div>
+</div>
+<p>Of course these two items could be combined into the following:</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>let g:EditorConfig_exclude_patterns = [&#39;fugitive://.*&#39;, &#39;scp://.*&#39;]
+</pre></div>
+</div>
+</section>
+<section id="disable-for-a-specific-filetype">
+<h3>Disable for a specific filetype<a class="headerlink" href="#disable-for-a-specific-filetype" title="Link to this heading">#</a></h3>
+<p>You can disable this plugin for a specific buffer by setting
+<code class="docutils literal notranslate"><span class="pre">b:EditorConfig_disable</span></code>.  Therefore, you can disable the
+plugin for all buffers of a specific filetype. For example, to disable
+EditorConfig for all git commit messages (filetype <code class="docutils literal notranslate"><span class="pre">gitcommit</span></code>):</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>au FileType gitcommit let b:EditorConfig_disable = 1
+</pre></div>
+</div>
+</section>
+<section id="disable-rules">
+<h3>Disable rules<a class="headerlink" href="#disable-rules" title="Link to this heading">#</a></h3>
+<p>In very rare cases,
+you might need to override some project-specific EditorConfig rules in global
+or local vimrc in some cases, e.g., to resolve conflicts of trailing whitespace
+trimming and buffer autosaving.  This is not recommended, but you can:</p>
+<div class="highlight-viml notranslate"><div class="highlight"><pre><span></span>let g:EditorConfig_disable_rules = [&#39;trim_trailing_whitespace&#39;]
+</pre></div>
+</div>
+<p>You are able to disable any supported EditorConfig properties.</p>
+</section>
+</section>
+<section id="bugs-and-feature-requests">
+<h2>Bugs and Feature Requests<a class="headerlink" href="#bugs-and-feature-requests" title="Link to this heading">#</a></h2>
+<p>Feel free to submit bugs, feature requests, and other issues to the
+<a class="reference external" href="https://github.com/editorconfig/editorconfig-vim/issues">issue tracker</a>. Be sure you have read the <a class="reference external" href="https://github.com/editorconfig/editorconfig/blob/master/CONTRIBUTING.md#submitting-an-issue">contribution guidelines</a>!</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./usr/share/vim/vim90/pack/dist/opt/editorconfig"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installation">Installation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-the-archive">Install with the archive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-as-vim8-plugin">Install as Vim8 plugin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-pathogen">Install with pathogen</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-vundle">Install with Vundle</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-with-vim-plug">Install with vim-plug</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#no-external-editorconfig-core-library-is-required">No external editorconfig core library is required</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supported-properties">Supported properties</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#selected-options">Selected Options</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#excluded-patterns">Excluded patterns</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-for-a-specific-filetype">Disable for a specific filetype</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#disable-rules">Disable rules</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#bugs-and-feature-requests">Bugs and Feature Requests</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Yen-Chia Hsu
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../../../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../../../../../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
