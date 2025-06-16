@@ -1,7 +1,7 @@
-# Table of contents
-# Learn more at https://jupyterbook.org/customize/toc.html
-
 format: jb-book
-root: docs/home
+root: docs/introductie.md
 chapters:
-- file: docs/notebook
+  - file: docs/dataset-preprocessing.md
+  - file: notebooks/story.ipynb
+  - file: docs/reflectie.md
+  - file: docs/werkverdeling.md
