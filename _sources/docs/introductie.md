@@ -11,7 +11,9 @@ Een hoge gelukscore wil niet gelijk zeggen dat mensen geen mentale gezondheidspr
 Dit perspectief wordt ondersteund door visualisatie 1 ([lijndiagram](../notebooks/datastory.ipynb#lijndiagram)) en visualisatie 2 ([wereldkaart](../notebooks/datastory.ipynb#Wereldkaart)) en visualisatie 6 ([staafdiagram](../notebooks/datastory.ipynb#staafdiagram)).
 
 ## Tweede perspectief
-Er zijn duidelijke aanwijzingen dat geluk samenhangt met mentale gezondheid. Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal netwerk, persoonlijke vrijheid en vertrouwen in instituties, lijken ook psychische problemen te verlagen. Dit suggereert dat een samenleving waarin mensen zich veilig, verbonden en autonoom voelen, zowel het geluk als de mentale gezondheid versterkt. Dit perspectief wordt ondersteund door visualisatie 3 ([tijdlijn](../notebooks/datastory.ipynb#Tijdlijn-van-psychische-stoornissen)) en visualisatie 4 ([correlatiediagram](../notebooks/datastory.ipynb#correlatiediagram)). Visualisatie 5 ([spreidingdiagram](../notebooks/datastory.ipynb#spreidingsdiagram)) en visualisatie 6 ([staafdiagram](../notebooks/datastory.ipynb#staafdiagram)) laten de relatie tussen geluk en mentale gezondheid zien door ze direct met elkaar te vergelijken.
+Er zijn duidelijke aanwijzingen dat geluk samenhangt met mentale gezondheid. Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal netwerk, persoonlijke vrijheid en vertrouwen in instituties, lijken ook psychische problemen te verlagen. Dit suggereert dat een samenleving waarin mensen zich veilig, verbonden en autonoom voelen, zowel het geluk als de mentale gezondheid versterkt. Dit perspectief wordt ondersteund door visualisatie 3 ([tijdlijn](../notebooks/datastory.ipynb#Tijdlijn-van-psychische-stoornissen)) en visualisatie 4 ([correlatiediagram](../notebooks/datastory.ipynb#correlatiediagram)).
+
+Visualisatie 5 ([spreidingdiagram](../notebooks/datastory.ipynb#spreidingsdiagram)) en visualisatie 6 ([staafdiagram](../notebooks/datastory.ipynb#staafdiagram)) laten de relatie tussen geluk en mentale gezondheid zien door ze direct met elkaar te vergelijken.
 
 
 
