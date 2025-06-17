@@ -1,3 +1,3 @@
-# jupyter-book-template
+# Jupyter Book for InfoVis
 
-This repository hosts the tutorial and template code for building a basic Jupyter Book website.
+This repository contains the files for our datastory for Information Visualisation.

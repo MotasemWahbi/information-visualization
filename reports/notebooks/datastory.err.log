@@ -1,0 +1,143 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# 4. Correlatiediagram
+# Verbindt de percentages depressie en angst in elk land.
+
+df_2019 = df[df['Year'] == 2019]
+
+depressie_col = 'Depressive disorders (share of population) - Sex: Both - Age: Age-standardized'
+angst_col = 'Anxiety disorders (share of population) - Sex: Both - Age: Age-standardized'
+
+fig = px.scatter(
+    df_2019,
+    x=depressie_col,
+    y=angst_col,
+    hover_name='Entity',  # tooltip bij muis
+    color=depressie_col,  # kleur tonen op basis van depressie
+    color_continuous_scale='Bluered',
+    size_max=12,
+    labels={
+        depressie_col: 'Depressie (%)',
+        angst_col: 'Angst (%)'
+    },
+    title='\U0001F517 Correlatie tussen depressie en angst per land (2019)',
+    trendline='ols'  # trendlijn toevoegen
+)
+
+fig.update_layout(
+    plot_bgcolor='white',
+    title_font=dict(size=20),
+    xaxis=dict(showgrid=True, gridcolor='lightgrey'),
+    yaxis=dict(showgrid=True, gridcolor='lightgrey'),
+    margin=dict(l=40, r=20, t=60, b=40)
+)
+
+fig.show()
+
+
+
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [0;32mIn[10], line 9[0m
+[1;32m      6[0m depressie_col [38;5;241m=[39m [38;5;124m'[39m[38;5;124mDepressive disorders (share of population) - Sex: Both - Age: Age-standardized[39m[38;5;124m'[39m
+[1;32m      7[0m angst_col [38;5;241m=[39m [38;5;124m'[39m[38;5;124mAnxiety disorders (share of population) - Sex: Both - Age: Age-standardized[39m[38;5;124m'[39m
+[0;32m----> 9[0m fig [38;5;241m=[39m [43mpx[49m[38;5;241;43m.[39;49m[43mscatter[49m[43m([49m
+[1;32m     10[0m [43m    [49m[43mdf_2019[49m[43m,[49m
+[1;32m     11[0m [43m    [49m[43mx[49m[38;5;241;43m=[39;49m[43mdepressie_col[49m[43m,[49m
+[1;32m     12[0m [43m    [49m[43my[49m[38;5;241;43m=[39;49m[43mangst_col[49m[43m,[49m
+[1;32m     13[0m [43m    [49m[43mhover_name[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mEntity[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m  [49m[38;5;66;43;03m# tooltip bij muis[39;49;00m
+[1;32m     14[0m [43m    [49m[43mcolor[49m[38;5;241;43m=[39;49m[43mdepressie_col[49m[43m,[49m[43m  [49m[38;5;66;43;03m# kleur tonen op basis van depressie[39;49;00m
+[1;32m     15[0m [43m    [49m[43mcolor_continuous_scale[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mBluered[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     16[0m [43m    [49m[43msize_max[49m[38;5;241;43m=[39;49m[38;5;241;43m12[39;49m[43m,[49m
+[1;32m     17[0m [43m    [49m[43mlabels[49m[38;5;241;43m=[39;49m[43m{[49m
+[1;32m     18[0m [43m        [49m[43mdepressie_col[49m[43m:[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mDepressie ([39;49m[38;5;124;43m%[39;49m[38;5;124;43m)[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     19[0m [43m        [49m[43mangst_col[49m[43m:[49m[43m [49m[38;5;124;43m'[39;49m[38;5;124;43mAngst ([39;49m[38;5;124;43m%[39;49m[38;5;124;43m)[39;49m[38;5;124;43m'[39;49m
+[1;32m     20[0m [43m    [49m[43m}[49m[43m,[49m
+[1;32m     21[0m [43m    [49m[43mtitle[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;130;43;01m\U0001F517[39;49;00m[38;5;124;43m Correlatie tussen depressie en angst per land (2019)[39;49m[38;5;124;43m'[39;49m[43m,[49m
+[1;32m     22[0m [43m    [49m[43mtrendline[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43mols[39;49m[38;5;124;43m'[39;49m[43m  [49m[38;5;66;43;03m# trendlijn toevoegen[39;49;00m
+[1;32m     23[0m [43m)[49m
+[1;32m     25[0m fig[38;5;241m.[39mupdate_layout(
+[1;32m     26[0m     plot_bgcolor[38;5;241m=[39m[38;5;124m'[39m[38;5;124mwhite[39m[38;5;124m'[39m,
+[1;32m     27[0m     title_font[38;5;241m=[39m[38;5;28mdict[39m(size[38;5;241m=[39m[38;5;241m20[39m),
+[0;32m   (...)[0m
+[1;32m     30[0m     margin[38;5;241m=[39m[38;5;28mdict[39m(l[38;5;241m=[39m[38;5;241m40[39m, r[38;5;241m=[39m[38;5;241m20[39m, t[38;5;241m=[39m[38;5;241m60[39m, b[38;5;241m=[39m[38;5;241m40[39m)
+[1;32m     31[0m )
+[1;32m     33[0m fig[38;5;241m.[39mshow()
+
+File [0;32m/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/plotly/express/_chart_types.py:69[0m, in [0;36mscatter[0;34m(data_frame, x, y, color, symbol, size, hover_name, hover_data, custom_data, text, facet_row, facet_col, facet_col_wrap, facet_row_spacing, facet_col_spacing, error_x, error_x_minus, error_y, error_y_minus, animation_frame, animation_group, category_orders, labels, orientation, color_discrete_sequence, color_discrete_map, color_continuous_scale, range_color, color_continuous_midpoint, symbol_sequence, symbol_map, opacity, size_max, marginal_x, marginal_y, trendline, trendline_options, trendline_color_override, trendline_scope, log_x, log_y, range_x, range_y, render_mode, title, subtitle, template, width, height)[0m
+[1;32m     14[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mscatter[39m(
+[1;32m     15[0m     data_frame[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[1;32m     16[0m     x[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[0;32m   (...)[0m
+[1;32m     63[0m     height[38;5;241m=[39m[38;5;28;01mNone[39;00m,
+[1;32m     64[0m ) [38;5;241m-[39m[38;5;241m>[39m go[38;5;241m.[39mFigure:
+[1;32m     65[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[1;32m     66[0m [38;5;124;03m    In a scatter plot, each row of `data_frame` is represented by a symbol[39;00m
+[1;32m     67[0m [38;5;124;03m    mark in 2D space.[39;00m
+[1;32m     68[0m [38;5;124;03m    """[39;00m
+[0;32m---> 69[0m     [38;5;28;01mreturn[39;00m [43mmake_figure[49m[43m([49m[43margs[49m[38;5;241;43m=[39;49m[38;5;28;43mlocals[39;49m[43m([49m[43m)[49m[43m,[49m[43m [49m[43mconstructor[49m[38;5;241;43m=[39;49m[43mgo[49m[38;5;241;43m.[39;49m[43mScatter[49m[43m)[49m
+
+File [0;32m/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/plotly/express/_core.py:2674[0m, in [0;36mmake_figure[0;34m(args, constructor, trace_patch, layout_patch)[0m
+[1;32m   2671[0m     [38;5;28;01melif[39;00m args[[38;5;124m"[39m[38;5;124mecdfnorm[39m[38;5;124m"[39m] [38;5;241m==[39m [38;5;124m"[39m[38;5;124mpercent[39m[38;5;124m"[39m:
+[1;32m   2672[0m         group [38;5;241m=[39m group[38;5;241m.[39mwith_columns((nw[38;5;241m.[39mcol(var) [38;5;241m/[39m group_sum) [38;5;241m*[39m [38;5;241m100.0[39m)
+[0;32m-> 2674[0m patch, fit_results [38;5;241m=[39m [43mmake_trace_kwargs[49m[43m([49m
+[1;32m   2675[0m [43m    [49m[43margs[49m[43m,[49m[43m [49m[43mtrace_spec[49m[43m,[49m[43m [49m[43mgroup[49m[43m,[49m[43m [49m[43mmapping_labels[49m[38;5;241;43m.[39;49m[43mcopy[49m[43m([49m[43m)[49m[43m,[49m[43m [49m[43msizeref[49m
+[1;32m   2676[0m [43m[49m[43m)[49m
+[1;32m   2677[0m trace[38;5;241m.[39mupdate(patch)
+[1;32m   2678[0m [38;5;28;01mif[39;00m fit_results [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+File [0;32m/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/plotly/express/_core.py:430[0m, in [0;36mmake_trace_kwargs[0;34m(args, trace_spec, trace_data, mapping_labels, sizeref)[0m
+[1;32m    427[0m     trace_patch[[38;5;124m"[39m[38;5;124mx[39m[38;5;124m"[39m] [38;5;241m=[39m trace_patch[[38;5;124m"[39m[38;5;124mx[39m[38;5;124m"[39m][38;5;241m.[39mto_numpy()
+[1;32m    429[0m trendline_function [38;5;241m=[39m trendline_functions[attr_value]
+[0;32m--> 430[0m y_out, hover_header, fit_results [38;5;241m=[39m [43mtrendline_function[49m[43m([49m
+[1;32m    431[0m [43m    [49m[43margs[49m[43m[[49m[38;5;124;43m"[39;49m[38;5;124;43mtrendline_options[39;49m[38;5;124;43m"[39;49m[43m][49m[43m,[49m
+[1;32m    432[0m [43m    [49m[43msorted_trace_data[49m[38;5;241;43m.[39;49m[43mget_column[49m[43m([49m[43margs[49m[43m[[49m[38;5;124;43m"[39;49m[38;5;124;43mx[39;49m[38;5;124;43m"[39;49m[43m][49m[43m)[49m[43m,[49m[43m  [49m[38;5;66;43;03m# narwhals series[39;49;00m
+[1;32m    433[0m [43m    [49m[43mx[49m[38;5;241;43m.[39;49m[43mto_numpy[49m[43m([49m[43m)[49m[43m,[49m[43m  [49m[38;5;66;43;03m# numpy array[39;49;00m
+[1;32m    434[0m [43m    [49m[43my[49m[38;5;241;43m.[39;49m[43mto_numpy[49m[43m([49m[43m)[49m[43m,[49m[43m  [49m[38;5;66;43;03m# numpy array[39;49;00m
+[1;32m    435[0m [43m    [49m[43margs[49m[43m[[49m[38;5;124;43m"[39;49m[38;5;124;43mx[39;49m[38;5;124;43m"[39;49m[43m][49m[43m,[49m
+[1;32m    436[0m [43m    [49m[43margs[49m[43m[[49m[38;5;124;43m"[39;49m[38;5;124;43my[39;49m[38;5;124;43m"[39;49m[43m][49m[43m,[49m
+[1;32m    437[0m [43m    [49m[43mnon_missing[49m[38;5;241;43m.[39;49m[43mto_numpy[49m[43m([49m[43m)[49m[43m,[49m[43m  [49m[38;5;66;43;03m# numpy array[39;49;00m
+[1;32m    438[0m [43m[49m[43m)[49m
+[1;32m    439[0m [38;5;28;01massert[39;00m [38;5;28mlen[39m(y_out) [38;5;241m==[39m [38;5;28mlen[39m(
+[1;32m    440[0m     trace_patch[[38;5;124m"[39m[38;5;124mx[39m[38;5;124m"[39m]
+[1;32m    441[0m ), [38;5;124m"[39m[38;5;124mmissing-data-handling failure in trendline code[39m[38;5;124m"[39m
+[1;32m    442[0m trace_patch[[38;5;124m"[39m[38;5;124my[39m[38;5;124m"[39m] [38;5;241m=[39m y_out
+
+File [0;32m/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/plotly/express/trendline_functions/__init__.py:42[0m, in [0;36mols[0;34m(trendline_options, x_raw, x, y, x_label, y_label, non_missing)[0m
+[1;32m     36[0m     [38;5;28;01mif[39;00m k [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m valid_options:
+[1;32m     37[0m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m     38[0m             [38;5;124m"[39m[38;5;124mOLS trendline_options keys must be one of [[39m[38;5;132;01m%s[39;00m[38;5;124m] but got [39m[38;5;124m'[39m[38;5;132;01m%s[39;00m[38;5;124m'[39m[38;5;124m"[39m
+[1;32m     39[0m             [38;5;241m%[39m ([38;5;124m"[39m[38;5;124m, [39m[38;5;124m"[39m[38;5;241m.[39mjoin(valid_options), k)
+[1;32m     40[0m         )
+[0;32m---> 42[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mstatsmodels[39;00m[38;5;21;01m.[39;00m[38;5;21;01mapi[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01msm[39;00m
+[1;32m     44[0m add_constant [38;5;241m=[39m trendline_options[38;5;241m.[39mget([38;5;124m"[39m[38;5;124madd_constant[39m[38;5;124m"[39m, [38;5;28;01mTrue[39;00m)
+[1;32m     45[0m log_x [38;5;241m=[39m trendline_options[38;5;241m.[39mget([38;5;124m"[39m[38;5;124mlog_x[39m[38;5;124m"[39m, [38;5;28;01mFalse[39;00m)
+
+[0;31mModuleNotFoundError[0m: No module named 'statsmodels'
+
