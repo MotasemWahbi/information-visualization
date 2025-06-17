@@ -2,6 +2,6 @@ format: jb-book
 root: docs/introductie.md
 chapters:
   - file: docs/dataset-preprocessing.md
-  - file: notebooks/story.ipynb
+  - file: notebooks/datastory.ipynb
   - file: docs/reflectie.md
   - file: docs/werkverdeling.md

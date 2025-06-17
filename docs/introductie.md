@@ -13,9 +13,5 @@ Dit perspectief wordt ondersteund door visualisatie 1 (lijndiagram) en visualisa
 ## Tweede perspectief
 Er zijn duidelijke aanwijzingen dat geluk samenhangt met mentale gezondheid. Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal netwerk, persoonlijke vrijheid en vertrouwen in instituties, lijken ook psychische problemen te verlagen. Dit suggereert dat een samenleving waarin mensen zich veilig, verbonden en autonoom voelen, zowel het geluk als de mentale gezondheid versterkt. Dit perspectief wordt ondersteund door visualisatie 3 (tijdlijn) en visualisatie 4 (correlatiediagram). Visualisatie 5 (spreidingdiagram) en visualisatie 6 (staafdiagram) laten de relatie tussen geluk en mentale gezondheid zien door ze direct met elkaar te vergelijken.
 
-## Groepsleden
-- Bram Turpijn
-- Dorsa Rakeei
-- Lisan Koning
-- Motasem Wahbi
+
 
