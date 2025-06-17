@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -357,7 +357,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -373,6 +375,16 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opschoning">Opschoning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschrijving-van-variabelen">Beschrijving van variabelen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -384,6 +396,31 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="datasets-en-voorbewerking">
 <h1>Datasets en voorbewerking<a class="headerlink" href="#datasets-en-voorbewerking" title="Link to this heading">#</a></h1>
+<p>Tijdens onze eerste teamgesprekken besloten we om op zoek te gaan naar datasets die niet alleen rijk aan informatie waren, maar ook ruimte boden voor meerdere perspectieven. Uiteindelijk kozen we voor twee goed bij elkaar passende bronnen: het World Happiness Report 2015 en de Mental Health Disorders Dataset (1990–2019). Het geluksonderzoek laat zien hoe mensen hun leven ervaren op basis van factoren zoals sociale steun en vrijheid. Tegelijk geeft de mentale gezondheidsdataset inzicht in het percentage mensen dat worstelt met depressie of angst. Door beide datasets samen te brengen konden we landen vergelijken op zowel geluksniveau als mentale gezondheid.</p>
+<section id="opschoning">
+<h2>Opschoning<a class="headerlink" href="#opschoning" title="Link to this heading">#</a></h2>
+<p>De twee gebruikte datasets hadden als bestandstype .csv. De Mental Health Disorders Dataset (1990–2019) bevatte 8 kolommen en 6420 rijen, terwijl het World Happiness Report 2015 bestond uit 10 kolommen en 158 rijen.
+Op basis van de continue variabele Happiness score is een nieuwe categorische kolom Score Category aangemaakt. Deze groepeert landen in vier klassen op basis van hun geluksscore: Zeer laag (0–4), Laag (4–6), Gemiddeld (6–7.5) en Hoog (7.5–10).
+Voor het analyseren van correlaties tussen geluk en mentale gezondheid zijn beide datasets gefilterd op het jaar 2019 en vervolgens samengevoegd op landniveau. Zo ontstond één gecombineerde dataset die gebruikt kon worden voor verdere visualisatie.
+Tot slot zijn uitsluitend de relevante kolommen behouden, zodat de uiteindelijke dataset overzichtelijk bleef en de visualisaties helder en interpreteerbaar konden worden weergegeven.</p>
+</section>
+<section id="beschrijving-van-variabelen">
+<h2>Beschrijving van variabelen<a class="headerlink" href="#beschrijving-van-variabelen" title="Link to this heading">#</a></h2>
+<p>In termen van variabelentype en meetschaal kunnen de gebruikte variabelen in deze dataset als volgt worden geclassificeerd:</p>
+<p>Continue / Ratio-variabelen:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Happiness</span> <span class="pre">score</span></code> (ook aangeduid als <code class="docutils literal notranslate"><span class="pre">geluksindex</span></code> of <code class="docutils literal notranslate"><span class="pre">geluksniveau</span></code>), <code class="docutils literal notranslate"><span class="pre">Depressie</span></code> (%), <code class="docutils literal notranslate"><span class="pre">Angst</span></code> (%), <code class="docutils literal notranslate"><span class="pre">Social</span> <span class="pre">support</span></code></p>
+<p>Discrete / Nominale variabelen:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Land</span></code></p>
+<p>Discrete / Intervalvariabelen:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Jaar</span></code></p>
+<p>Momenteel gebruikte variabelen zijn:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Happiness</span> <span class="pre">score</span></code>, <code class="docutils literal notranslate"><span class="pre">Depressie</span></code> (%), <code class="docutils literal notranslate"><span class="pre">Angst</span></code> (%), <code class="docutils literal notranslate"><span class="pre">Social</span> <span class="pre">support</span></code>, <code class="docutils literal notranslate"><span class="pre">Land</span></code>, <code class="docutils literal notranslate"><span class="pre">Jaar</span></code></p>
+</section>
+<section id="aggregaties">
+<h2>Aggregaties<a class="headerlink" href="#aggregaties" title="Link to this heading">#</a></h2>
+<p>Om de relatie tussen geluk en mentale gezondheid inzichtelijk te maken, hebben we de gegevens per land samengevoegd en geaggregeerd op het jaar 2015. In dit jaar zijn zowel geluksdata als percentages van depressie en angststoornissen beschikbaar voor een groot aantal landen.
+Voor verschillende visualisaties is er bovendien een selectie gemaakt van de top 15 of top 5 landen met de hoogste geluksindex. Dit helpt bij het identificeren van patronen, bijvoorbeeld in maatschappelijke steun of het gelijktijdig voorkomen van depressie en angststoornissen.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -440,6 +477,23 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opschoning">Opschoning</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#beschrijving-van-variabelen">Beschrijving van variabelen</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aggregaties">Aggregaties</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
