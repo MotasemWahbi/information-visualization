@@ -13,10 +13,10 @@ We analyseren door middel van data-visualisaties of de gelukscores een accurate 
 ## Eerste perspectief
 De gelukscore hangt niet samen met de mentale gezondheid van een bevolking. Dit perspectief wordt ondersteund door visualisatie 1 (lijndiagram), visualisatie 2 (wereldkaart) en visualisatie 7 (staafdiagram).
 
-Eerste argument
+### Eerste argument
 Hoewel gelukscores deels gebaseerd zijn op het welzijn, kunnen nooit alle aspecten in de berekening worden meegenomen. Sommige aspecten die achterwege zijn gelaten, kunnen wel een grote rol spelen in de mentale gezondheid van een bevolking. Hierdoor geeft de gelukscore geen volledig beeld van de mentale gezondheid.
 
-Tweede argument
+### Tweede argument
 De gelukscore is naast het mentale welzijn gebaseerd op vele andere factoren. Wanneer de andere factoren, zoals economische stabiliteit of sociale steun, hoge scores ontvangen, kan de gelukscore flink omhoog gaan. Dit zal ervoor zorgen dat lage scores voor de mentale gezondheid gemaskeerd worden in de totale gelukscore.
 
 Derde argument
@@ -26,8 +26,8 @@ De genoteerde gelukscore hangt niet samen met de mentale gezondheid, omdat de ge
 ## Tweede perspectief
 De gelukscore hangt samen met de mentale gezondheid van een bevolking. Dit perspectief wordt ondersteund door visualisatie 3 (tijdlijn) en visualisatie 4 (correlatiediagram).
 
-Eerste argument
+### Eerste argument
 Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal netwerk, persoonlijke vrijheid en vertrouwen in instituties, verlagen meestal ook mentale problemen. Dit suggereert dat een samenleving waarin mensen zich veilig, verbonden en autonoom voelen, zowel het geluk als de mentale gezondheid versterkt. 
 
-Tweede argument
+### Tweede argument
 Bepaalde systemen die bijdragen aan een hogere gelukscore, zoals toegankelijke gezondheidszorg en een sterk sociaal vangnet, dragen ook bij aan de opsporing en behandeling van mentale problemen. Hierdoor zullen landen met een hoge gelukscore ook een betere mentale gezondheid hebben.
