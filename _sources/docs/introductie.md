@@ -19,7 +19,7 @@ Hoewel gelukscores deels gebaseerd zijn op het welzijn, kunnen nooit alle aspect
 ### Tweede argument
 De gelukscore is naast het mentale welzijn gebaseerd op vele andere factoren. Wanneer de andere factoren, zoals economische stabiliteit of sociale steun, hoge scores ontvangen, kan de gelukscore flink omhoog gaan. Dit zal ervoor zorgen dat lage scores voor de mentale gezondheid gemaskeerd worden in de totale gelukscore.
 
-Derde argument
+### Derde argument
 De genoteerde gelukscore hangt niet samen met de mentale gezondheid, omdat de gelukscore niet representatief is. De schijn van een gelukkige bevolking wordt opgehouden, doordat mensen een sociale druk voelen om geluk te rapporteren of vanwege culturele verschillen die leiden tot andere interpretaties van geluk.
 
 
