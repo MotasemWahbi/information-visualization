@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -357,7 +357,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -373,6 +375,14 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie-op-de-feedback">Reflectie op de feedback</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -384,6 +394,23 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="reflectie">
 <h1>Reflectie<a class="headerlink" href="#reflectie" title="Link to this heading">#</a></h1>
+<section id="reflectie-op-de-feedback">
+<h2>Reflectie op de feedback<a class="headerlink" href="#reflectie-op-de-feedback" title="Link to this heading">#</a></h2>
+<p>Tijdens de werkgroep op 24 juni, heeft ons team feedback ontvangen van groep A5 en van de TA. De feedback ging over zowel de inhoud als de vormgeving van onze visualisaties, met daarbij suggesties om het verhaal sterker en vloeiender te maken. Deze feedback werd mondeling besproken en is later aangevuld via e-mail door de TA.</p>
+<p>Een overzicht van de belangrijkste feedbackpunten:</p>
+<ul class="simple">
+<li><p>De scatterplot “Geluk vs. Depressie (2019)” werd als sterk beschouwd, maar het werd aangeraden om niet slechts één jaartal te gebruiken. Er werd voorgesteld meerdere jaren te verwerken, bijvoorbeeld 2015-2019, omdat dit de overlappende jaren zijn waar we in beide datasets informatie over hebben.</p></li>
+<li><p>Bij de grafiek over maatschappelijke steun (2015) werd aangeraden om gebruikers de mogelijkheid te geven een jaartal te kiezen, zodat de visualisatie interactiever wordt.</p></li>
+<li><p>De perspectieven in het verhaal moeten duidelijk van elkaar verschillen en gebaseerd zijn op twee aparte argumenten.</p></li>
+<li><p>Er werd ook benadrukt dat we voorzichtig moeten zijn met het suggereren van causaliteit op basis van correlatie.</p></li>
+<li><p>De visualisatie over Afghanistan werd als interessant gezien, maar het werd voorgesteld om gebruikers zelf een land te laten kiezen om te bekijken.</p></li>
+<li><p>Bij de visualisatie van de top 5 landen in 2015 (geluk, depressie, angst) werd aanbevolen om drie afzonderlijke grafieken te maken om de categorieën duidelijker van elkaar te scheiden.</p></li>
+<li><p>Daarnaast werd de hoverfunctie als niet interactief genoeg ervaren.</p></li>
+<li><p>In de opvolgmail van de TA werd geadviseerd om bij de op één na laatste grafiek de assen te draaien en de y-as te laten starten bij 0.4 in plaats van 0.0, zodat de verschillen beter zichtbaar zijn.</p></li>
+<li><p>Voor de laatste plot werd voorgesteld om gebruik te maken van subplots per categorie, bijvoorbeeld met Seaborn’s PairGrid of dotplot, zodat de drie variabelen duidelijker van elkaar onderscheiden worden.</p></li>
+</ul>
+<p>We vonden deze feedback erg waardevol en hebben besloten om de meeste suggesties in ons verhaal en de visualisaties te verwerken.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -440,6 +467,21 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reflectie-op-de-feedback">Reflectie op de feedback</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
