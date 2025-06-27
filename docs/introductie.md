@@ -1,4 +1,5 @@
 # Introductie
+InfoVis Groep B2: Bram Turpijn, Dorsa Rakeei, Lisan Koning en Motasem Wahbi. 
 
 Al jarenlang staan landen zoals Zweden, Denemarken en Finland bovenaan in het World Happiness Report. Maar achter deze hoge gelukscores schuilt een opvallende paradox: veel van deze ‘gelukkigste’ landen rapporteren tegelijkertijd ook hoge prevalenties van psychische aandoeningen, zoals depressie en angststoornissen. Hoe kan een land als gelukkig worden gezien, terwijl de mentale gezondheidsproblemen toenemen?
 
