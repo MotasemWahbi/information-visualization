@@ -7,7 +7,6 @@
 - Motasem Wahbi
 
 ## Taken
-Werkverdeling
 Onze samenwerking vond plaats tijdens de wekelijkse werkcolleges en via berichten in onze gedeelde online chat. In het begin van het project brachten teamleden datasets en bijbehorende perspectieven in. We kozen gezamenlijk het onderwerp en de dataset die het beste aansloten bij de projectdoelen. Vervolgens begonnen we met het voorbewerken van de gegevens en het bespreken van mogelijke grafieken die relevante perspectieven konden ondersteunen.
 
 Terwijl sommigen aan de visualisaties werkten, dachten anderen na over de structuur en inhoud van het verhaal. Gaandeweg werd een eerste versie van het dataverhaal opgebouwd. In de resterende tijd hebben we de visualisaties en de verhaallijn verder verfijnd. Ten slotte hebben we op basis van de ontvangen peer feedback het eindproduct afgerond.
