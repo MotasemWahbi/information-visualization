@@ -18,9 +18,8 @@ Een overzicht van de belangrijkste feedbackpunten:
 
 - Bij de visualisatie van de top 5 landen in 2015 (geluk, depressie, angst) werd aanbevolen om drie afzonderlijke grafieken te maken om de categorieën duidelijker van elkaar te scheiden.
 
-- Daarnaast werd de hoverfunctie als niet interactief genoeg ervaren.
+- Daarnaast werd in de opvolgmail van de TA geadviseerd om bij de op één na laatste grafiek de assen te draaien en de y-as te laten starten bij 0.4 in plaats van 0.0, zodat de verschillen beter zichtbaar zijn.
 
-- In de opvolgmail van de TA werd geadviseerd om bij de op één na laatste grafiek de assen te draaien en de y-as te laten starten bij 0.4 in plaats van 0.0, zodat de verschillen beter zichtbaar zijn.
 - Voor de laatste plot werd voorgesteld om gebruik te maken van subplots per categorie, bijvoorbeeld met Seaborn’s PairGrid of dotplot, zodat de drie variabelen duidelijker van elkaar onderscheiden worden.
 
 
