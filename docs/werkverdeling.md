@@ -21,4 +21,4 @@ Dorsa heeft de onderdelen Dataset en voorbewerking, Reflectie en Werkverdeling o
 Lisan schreef zowel de inleiding als de beide perspectieven van het dataverhaal. Ze leverde inhoudelijke bijdragen tijdens de peer feedbacksessie en discussie.
 
 ### Motasem
-Motasem was verantwoordelijk voor het ontwikkelen van de grafieken en droeg daarnaast bij aan de opbouw van de verhaallijn. Hij was aanwezig bij de peer feedbacksessie en dacht mee over de verwerking van suggesties.
+Motasem was verantwoordelijk voor het ontwikkelen van de grafieken en droeg daarnaast bij aan de opbouw van de verhaallijn en het vinden van bronnen. Hij was aanwezig bij de peer feedbacksessie en dacht mee over de verwerking van suggesties.
