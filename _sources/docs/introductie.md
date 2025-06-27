@@ -27,7 +27,7 @@ De genoteerde gelukscore hangt niet samen met de mentale gezondheid, omdat de ge
 De gelukscore hangt samen met de mentale gezondheid van een bevolking. Dit perspectief wordt ondersteund door visualisatie 3 (tijdlijn) en visualisatie 4 (correlatiediagram).
 
 ### Eerste argument
-Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal netwerk, persoonlijke vrijheid en vertrouwen in instituties, verlagen meestal ook mentale problemen. Dit suggereert dat een samenleving waarin mensen zich veilig, verbonden en autonoom voelen, zowel het geluk als de mentale gezondheid versterkt. 
+Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal vangnet, toegankelijke gezondheidszorg en vertrouwen in instituties, veroorzaken minder mentale problemen. Daarnaast dragen ze ook vaak bij aan de opsporing en behandeling van mentale problemen. Hierdoor zullen landen met een hoge gelukscore ook een betere mentale gezondheid hebben. 
 
 ### Tweede argument
 Bepaalde systemen die bijdragen aan een hogere gelukscore, zoals toegankelijke gezondheidszorg en een sterk sociaal vangnet, dragen ook bij aan de opsporing en behandeling van mentale problemen. Hierdoor zullen landen met een hoge gelukscore ook een betere mentale gezondheid hebben.
