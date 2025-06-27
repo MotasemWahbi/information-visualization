@@ -22,17 +22,92 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-w_h = pd.read_csv('/home/jovyan/work/datasets/world_happiness_2015.csv', sep=';')
+def load_data(year):
+    """Laad de dataset voor het geselecteerde jaar."""
+    w_h = pd.read_csv(f'../datasets/world_happiness_{year}.csv', sep=';')
+    if w_h['Happiness score'].dtype == object:
+        w_h['Happiness score'] = w_h['Happiness score'].str.replace(',', '.').astype(float)
+    if w_h['Social support'].dtype == object:
+        w_h['Social support'] = w_h['Social support'].str.replace(',', '.').astype(float)
+    return w_h
 
-w_h.head(5)
+def create_social_support_chart():
+    """Maak een interactieve horizontale staafdiagram met buttons om het jaar te selecteren."""
+    years = [2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    fig = go.Figure()
+
+    # Voeg data toe voor elk jaar
+    for year in years:
+        w_h = load_data(year)
+        top15 = w_h.sort_values('Happiness score', ascending=False).head(15)
+        top15_sorted = top15.sort_values('Social support')
+
+        fig.add_trace(go.Bar(
+            x=top15_sorted['Social support'],
+            y=top15_sorted['Country'],
+            orientation='h',
+            name=f'{year}',
+            visible=(year == 2015)
+        ))
+
+    # Maak buttons voor jaarselectie
+    buttons = []
+    for i, year in enumerate(years):
+        visibility = [False] * len(years)
+        visibility[i] = True
+        buttons.append(dict(
+            label=str(year),
+            method='update',
+            args=[
+                {'visible': visibility},
+                {'title': f'Maatschappelijke steun in de 15 gelukkigste landen ({year})'}
+            ]
+        ))
+
+    # Update layout met buttons
+    fig.update_layout(
+        updatemenus=[dict(
+            type='buttons',
+            buttons=buttons,
+            direction='down',
+            showactive=True,
+            x=1.1,
+            y=1
+        )],
+        title='Maatschappelijke steun in de 15 gelukkigste landen (2015)',
+        xaxis_title='Social support',
+        yaxis_title='Country',
+        height=600,
+        width=800
+    )
+
+    html_content = pio.to_html(fig, include_plotlyjs='cdn')
+    return HTML(html_content)
+
+create_social_support_chart()
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Cell [0;32mIn[2], line 1[0m
-[0;32m----> 1[0m w_h [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_csv[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43m/home/jovyan/work/datasets/world_happiness_2015.csv[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43msep[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m;[39;49m[38;5;124;43m'[39;49m[43m)[49m
-[1;32m      3[0m w_h[38;5;241m.[39mhead([38;5;241m5[39m)
+Cell [0;32mIn[12], line 63[0m
+[1;32m     60[0m     html_content [38;5;241m=[39m pio[38;5;241m.[39mto_html(fig, include_plotlyjs[38;5;241m=[39m[38;5;124m'[39m[38;5;124mcdn[39m[38;5;124m'[39m)
+[1;32m     61[0m     [38;5;28;01mreturn[39;00m HTML(html_content)
+[0;32m---> 63[0m [43mcreate_social_support_chart[49m[43m([49m[43m)[49m
+
+Cell [0;32mIn[12], line 17[0m, in [0;36mcreate_social_support_chart[0;34m()[0m
+[1;32m     15[0m [38;5;66;03m# Voeg data toe voor elk jaar[39;00m
+[1;32m     16[0m [38;5;28;01mfor[39;00m year [38;5;129;01min[39;00m years:
+[0;32m---> 17[0m     w_h [38;5;241m=[39m [43mload_data[49m[43m([49m[43myear[49m[43m)[49m
+[1;32m     18[0m     top15 [38;5;241m=[39m w_h[38;5;241m.[39msort_values([38;5;124m'[39m[38;5;124mHappiness score[39m[38;5;124m'[39m, ascending[38;5;241m=[39m[38;5;28;01mFalse[39;00m)[38;5;241m.[39mhead([38;5;241m15[39m)
+[1;32m     19[0m     top15_sorted [38;5;241m=[39m top15[38;5;241m.[39msort_values([38;5;124m'[39m[38;5;124mSocial support[39m[38;5;124m'[39m)
+
+Cell [0;32mIn[12], line 3[0m, in [0;36mload_data[0;34m(year)[0m
+[1;32m      1[0m [38;5;28;01mdef[39;00m[38;5;250m [39m[38;5;21mload_data[39m(year):
+[1;32m      2[0m [38;5;250m    [39m[38;5;124;03m"""Laad de dataset voor het geselecteerde jaar."""[39;00m
+[0;32m----> 3[0m     w_h [38;5;241m=[39m [43mpd[49m[38;5;241;43m.[39;49m[43mread_csv[49m[43m([49m[38;5;124;43mf[39;49m[38;5;124;43m'[39;49m[38;5;124;43m../datasets/world_happiness_[39;49m[38;5;132;43;01m{[39;49;00m[43myear[49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m.csv[39;49m[38;5;124;43m'[39;49m[43m,[49m[43m [49m[43msep[49m[38;5;241;43m=[39;49m[38;5;124;43m'[39;49m[38;5;124;43m;[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      4[0m     [38;5;28;01mif[39;00m w_h[[38;5;124m'[39m[38;5;124mHappiness score[39m[38;5;124m'[39m][38;5;241m.[39mdtype [38;5;241m==[39m [38;5;28mobject[39m:
+[1;32m      5[0m         w_h[[38;5;124m'[39m[38;5;124mHappiness score[39m[38;5;124m'[39m] [38;5;241m=[39m w_h[[38;5;124m'[39m[38;5;124mHappiness score[39m[38;5;124m'[39m][38;5;241m.[39mstr[38;5;241m.[39mreplace([38;5;124m'[39m[38;5;124m,[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124m.[39m[38;5;124m'[39m)[38;5;241m.[39mastype([38;5;28mfloat[39m)
 
 File [0;32m/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/pandas/io/parsers/readers.py:1026[0m, in [0;36mread_csv[0;34m(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)[0m
 [1;32m   1013[0m kwds_defaults [38;5;241m=[39m _refine_defaults_read(
@@ -89,5 +164,5 @@ File [0;32m/opt/anaconda3/envs/jupyterbook/lib/python3.10/site-packages/pandas/
 [1;32m    881[0m         [38;5;66;03m# Binary mode[39;00m
 [1;32m    882[0m         handle [38;5;241m=[39m [38;5;28mopen[39m(handle, ioargs[38;5;241m.[39mmode)
 
-[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '/home/jovyan/work/datasets/world_happiness_2015.csv'
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: '../datasets/world_happiness_2025.csv'
 
