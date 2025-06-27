@@ -28,6 +28,3 @@ De gelukscore hangt samen met de mentale gezondheid van een bevolking. Dit persp
 
 ### Eerste argument
 Factoren die bijdragen aan hogere gelukscores, zoals een sterk sociaal vangnet, toegankelijke gezondheidszorg en vertrouwen in instituties, veroorzaken minder mentale problemen. Daarnaast dragen ze ook vaak bij aan de opsporing en behandeling van mentale problemen. Hierdoor zullen landen met een hoge gelukscore ook een betere mentale gezondheid hebben. 
-
-### Tweede argument
-Bepaalde systemen die bijdragen aan een hogere gelukscore, zoals toegankelijke gezondheidszorg en een sterk sociaal vangnet, dragen ook bij aan de opsporing en behandeling van mentale problemen. Hierdoor zullen landen met een hoge gelukscore ook een betere mentale gezondheid hebben.
